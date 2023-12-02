@@ -1,0 +1,37 @@
+Duck License
+
+1. Grant of License
+
+This license agreement ("License") permits users ("Licensee") to use the code in this repository ("Software") subject to the terms and conditions set forth herein.
+
+2. Usage Rights
+
+a. Individuals: Individual users are granted a free, non-exclusive, and non-transferable license to use the Software for any lawful purpose, excluding profit-making activities.
+
+b. Commercial/Company Use: Any use of the Software by companies, or in any commercial context, is strictly prohibited under this License. Companies or individuals intending to use the Software in such contexts must obtain a separate agreement with the developers.
+
+3. Restrictions
+
+The Licensee is permitted to use, modify, and distribute the Software, provided that such activities:
+
+Are within the bounds of applicable laws and regulations.
+Do not involve the direct or indirect generation of revenue or profit.
+The Licensee shall not:
+
+Distribute, sell, lease, rent, lend, or sublicense the Software for profit.
+Use the Software in a commercial or company environment without a specific agreement with the developers.
+4. Contact Information
+
+For inquiries regarding commercial use, please contact [Your Contact Information].
+
+5. Disclaimer of Warranty
+
+The Software is provided "as is", without warranty of any kind, express or implied.
+
+6. Limitation of Liability
+
+In no event shall the developers be liable for any claim, damages, or other liability arising from, out of, or in connection with the Software or the use of the Software.
+
+7. Termination
+
+This License is effective until terminated. The License will terminate immediately without notice if the Licensee fails to comply with any term of this License.

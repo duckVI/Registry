@@ -1,0 +1,104 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.reg
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Visual Studio Files #
+#######################
+[Bb]in/
+[Oo]bj/
+*.user
+*.aps
+*.pch
+*.vsd
+*.suo
+*.ncb
+*.sln.docstates
+*.userprefs
+*.frx
+*.sbr
+*.backup*
+*.vbw
+*.vps
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+ipch/
+*.tlog
+*.tmp
+*.err
+*.userosscache
+*.sdf
+*.opensdf
+*.unsuccessfulbuild
+*.bsc
+*.suo
+*.bak
+*.swp
+*.mdf
+*.ldf
+*.dbmdl
+*.jfm
+*.dbproj.schemaview
+Generated_Code/
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*.resharper.user
+*.dotCover
+
+# Rider
+.idea/
+
+# User-specific files #
+#######################
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# MonoDevelop/Xamarin Studio #
+###############################
+*.pidb
+*.userprefs
+
+# Build results #
+#################
+**/[Bb]in/
+**/[Oo]bj/
+**/[Ll]og/
+**/[Ll]ogs/

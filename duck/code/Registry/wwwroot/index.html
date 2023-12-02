@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registry Backuper</title>
+    <icon href="./resources/icon.ico" />
+    <style>
+        body {
+            background-color: #000000;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh; /* This is important to make the container fill the screen */
+        }
+
+        .right-side {
+            display: flex;
+            align-self: flex-start;
+            width: 65vw;
+            height: 100vh; 
+        }
+
+        .right-side pre{
+            font-size: 0.8vh;
+            color: white;
+        }
+
+        .left-side, .right-side {
+            flex: 1;
+        }
+
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+            width: 35vw;
+            height: 33vh;
+        }
+        
+        .logo-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-self: flex-start;
+            width: inherit;
+            height: auto;
+            font-size: 0.4vh;
+            font-family: monospace;
+            color: white;
+            margin-left: 30%;
+            margin-top: 10%;
+        }
+
+        .button-section {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-self: flex-end;
+            margin-top: 20%;
+        }
+
+        .button-section pre {
+            flex: 1 2 calc(15vw);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 2vw;
+            color: white;
+            width: auto;
+            height: 5vh;
+            font-family: Arial, sans-serif;
+            padding-left: 30%;
+        }
+
+        .button-section pre:hover {
+            background-color: #ecd71d61;
+        }
+    </style>
+</head>
+    <body>
+        <div class="container">
+            <div class="left-side">
+                <div class="logo-section">
+                    <pre>
+<!-- logo.ascii -->
+                    </pre>
+                </div>
+                <div class="button-section">
+                    <!-- ASCII Art Buttons -->
+                    <pre id="backup" class="button" onclick="backup()">[Backup Registry]</pre>
+                    <pre id="folder" class="button" onclick="folder()">[Open Backup Folder]</pre>
+                    <pre id="close" class="button" onclick="closeServer()">[Close]</pre>
+                    <!-- <pre id="button4" class="button" onclick="buttonClicked('button4')">[Button4]</pre> -->
+            </div>
+            </div>
+            <div class="right-side">
+                <pre>
+<!-- duck.ascii -->
+                </pre>
+            </div>
+        </div>
+
+        <script>
+            function backup() {
+                var button = document.getElementById("backup");
+                // Change button content to ASCII loading
+                button.innerHTML = 'Loading...';
+
+                fetch('/backup')
+                .then(response => response.text())
+                .then(data => {
+                            console.log(data);
+                            // Update button content based on response
+                            if (data === 'True') {
+                                button.innerHTML = '[Backup Registry] &#10003;'; 
+                            } else {
+                                button.innerHTML = '[Backup Registry] &#10007;';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            // Update button to show error occurred
+                            button.innerHTML = '[Backup Registry] Error';
+                        });
+            }
+
+            function folder() {
+                var button = document.getElementById("folder");
+                // Change button content to ASCII loading
+                button.innerHTML = 'Loading...';
+
+                fetch('/folder')
+                .then(response => response.text())
+                .then(data => {
+                            console.log(data);
+                            // Update button content based on response
+                            if (data === 'True') {
+                                button.innerHTML = '[Open Backup Folder] &#10003;'; 
+                            } else {
+                                button.innerHTML = '[Open Backup Folder] &#10007;';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            // Update button to show error occurred
+                            button.innerHTML = '[Open Backup Folder] Error';
+                });
+            }
+
+            function closeServer() {
+                var button = document.getElementById("close");
+                // Change button content to ASCII loading
+                button.innerHTML = 'Loading...';
+
+                fetch('/closeserver')
+                .then(response => response.text())
+                .then(data => {
+                            console.log(data);
+                            // Update button content based on response
+                            if (data === 'True') {
+                                button.innerHTML = '[Close] &#10003;'; 
+                            } else {
+                                button.innerHTML = '[Close] &#10007;';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            // Update button to show error occurred
+                            button.innerHTML = '[Close] Error';
+                });
+            }
+            
+        </script>
+        
+    </body>
+</html>
